@@ -2,6 +2,7 @@
 #include "GameState.h"
 #include "Platform.h"
 #include "StackT.h"
+#include "Console.h"
 
 class GameState;
 
@@ -10,6 +11,7 @@ class GameStateManager
 private:
 	StackT<GameState*> states;
 	Platform* platform;
+	Console* console;
 public:
 	GameStateManager();
 	~GameStateManager();

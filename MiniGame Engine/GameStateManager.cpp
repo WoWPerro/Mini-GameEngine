@@ -4,6 +4,7 @@
 GameStateManager::GameStateManager()
 {
 	platform = new Platform("Tank");
+	console = Console::Get();
 }
 
 GameStateManager::~GameStateManager()
@@ -26,7 +27,7 @@ void GameStateManager::GameLoop()
 		}
 		catch (...)
 		{
-			std::cout << "Critical error Tank is closing";
+			console->PrintFatal("Critical error Tank is closing");
 			break;
 		}
 	}

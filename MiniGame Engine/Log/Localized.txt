@@ -1,0 +1,19 @@
+ESPAÑOL
+{
+Inicialización
+Dibujado
+Revisión de entradas
+Actualizado
+Cerrado
+ERROR CRITICO
+}
+
+INGLES
+{
+Inicialize
+Draw
+Input
+Update
+Close
+CRITICAL ERROR
+}

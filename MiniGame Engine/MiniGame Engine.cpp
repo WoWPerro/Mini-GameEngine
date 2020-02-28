@@ -6,20 +6,15 @@
 #include "Game.h"
 #include <time.h>
 #include <Windows.h>
+#include "Console.h"
 
 int main(int argc, char* argv[])
 {
 	srand(time(NULL));
 	GameStateManager* manager = new GameStateManager();
+	Console::Get()->PrintRaw("Mi perro");
+	Console::Get()->PrintFatal("AYUDAAAAAAAAAAAAAAAAAAA");
 	manager->SetState(new Game());
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	// you can loop k higher to see more color choices
-	for (int k = 1; k < 255; k++)
-	{
-		// pick the colorattribute k you want
-		SetConsoleTextAttribute(hConsole, k);
-		std::cout << k << " I want to be nice today!" << std::endl;
-	}
 	manager->GameLoop();
 	delete manager;
 	return 0;

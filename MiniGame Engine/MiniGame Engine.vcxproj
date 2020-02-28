@@ -154,13 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Console.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="Gif.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ListaT.cpp" />
+    <ClCompile Include="Log\Console.cpp" />
     <ClCompile Include="MiniGame Engine.cpp" />
     <ClCompile Include="NodoT.cpp" />
     <ClCompile Include="Platform.cpp" />
@@ -169,13 +169,13 @@
     <ClCompile Include="Text.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Console.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="Gif.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ListaT.h" />
+    <ClInclude Include="Log\Console.h" />
     <ClInclude Include="NodoT.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="SimpleIni.h" />
