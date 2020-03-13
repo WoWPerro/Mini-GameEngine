@@ -1,8 +1,8 @@
 #pragma once
 #include "GameState.h"
 #include "Platform.h"
-#include "StackT.h"
-#include "Console.h"
+#include "..\DataBase\StackT.h"
+#include "..\Log\Console.h"
 
 class GameState;
 

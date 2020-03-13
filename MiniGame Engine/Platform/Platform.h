@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 #include "SDL.h"
-#include "Image.h"
+#include "..\AssetManager\Image.h"
 #include "GameState.h"
-#include "ListaT.h"
+#include "..\DataBase\ListaT.h"
 
 class GameState;
 

@@ -1,19 +1,51 @@
-ESPAÑOL
+ESPANOL
 {
+INFO
+{
+Crear Ventana
+Crear Renderizador
 Inicialización
 Dibujado
 Revisión de entradas
 Actualizado
 Cerrado
+}
+FATAL
+{
 ERROR CRITICO
+}
+WARNING
+{
+
+}
+ERROR
+{
+
+}
 }
 
 INGLES
 {
+INFO
+{
+Create Window
+Create Renderer
 Inicialize
 Draw
 Input
 Update
 Close
+}
+FATAL
+{
 CRITICAL ERROR
+}
+WARNING
+{
+
+}
+ERROR
+{
+
+}
 }

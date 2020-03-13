@@ -1,6 +1,6 @@
 #include "Image.h"
 #include "SDL_image.h"
-#include "Platform.h"
+#include "..\Platform\Platform.h"
 void Image::LoadImage(std::string name)
 {
 	this->name = name;

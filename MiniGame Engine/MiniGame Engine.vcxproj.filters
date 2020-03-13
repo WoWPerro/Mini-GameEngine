@@ -13,87 +13,112 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\AssetManager">
+      <UniqueIdentifier>{1ef01d96-cb38-420d-b438-8825649c722c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataBase">
+      <UniqueIdentifier>{cb2a7ace-b201-4e58-a96c-cbeba18a66f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Log">
+      <UniqueIdentifier>{1bd51467-34ef-4908-b9d5-8ee09408c533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{91adcc00-7805-4359-aa91-e35612f20b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Platform">
+      <UniqueIdentifier>{ebae1ff4-3f6c-4a35-bc14-7e1022402fc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MiniGame Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AssetManager\Gif.cpp">
+      <Filter>Source Files\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AssetManager\Image.cpp">
+      <Filter>Source Files\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="GameStateManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AssetManager\Text.cpp">
+      <Filter>Source Files\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="Gif.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DataBase\ListaT.cpp">
+      <Filter>Source Files\DataBase</Filter>
     </ClCompile>
-    <ClCompile Include="Image.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DataBase\NodoT.cpp">
+      <Filter>Source Files\DataBase</Filter>
     </ClCompile>
-    <ClCompile Include="ListaT.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NodoT.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StackT.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StackAllocator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DataBase\StackT.cpp">
+      <Filter>Source Files\DataBase</Filter>
     </ClCompile>
     <ClCompile Include="Log\Console.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\GameState.cpp">
+      <Filter>Source Files\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\GameStateManager.cpp">
+      <Filter>Source Files\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\Platform.cpp">
+      <Filter>Source Files\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\StackAllocator.cpp">
+      <Filter>Source Files\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Game.cpp">
+      <Filter>Source Files\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AssetManager\Gif.h">
+      <Filter>Source Files\AssetManager</Filter>
     </ClInclude>
-    <ClInclude Include="GameState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AssetManager\Image.h">
+      <Filter>Source Files\AssetManager</Filter>
     </ClInclude>
-    <ClInclude Include="GameStateManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AssetManager\Text.h">
+      <Filter>Source Files\AssetManager</Filter>
     </ClInclude>
-    <ClInclude Include="Gif.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DataBase\ListaT.h">
+      <Filter>Source Files\DataBase</Filter>
     </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DataBase\NodoT.h">
+      <Filter>Source Files\DataBase</Filter>
     </ClInclude>
-    <ClInclude Include="ListaT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StackT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SimpleIni.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StackAllocator.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DataBase\StackT.h">
+      <Filter>Source Files\DataBase</Filter>
     </ClInclude>
     <ClInclude Include="Log\Console.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Log</Filter>
     </ClInclude>
+    <ClInclude Include="Log\SimpleIni.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\GameState.h">
+      <Filter>Source Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\GameStateManager.h">
+      <Filter>Source Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Platform.h">
+      <Filter>Source Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\StackAllocator.h">
+      <Filter>Source Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\Game.h">
+      <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Log\Localized.txt">
+      <Filter>Source Files\Log</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log\Settings.ini">
+      <Filter>Source Files\Log</Filter>
+    </None>
   </ItemGroup>
 </Project>

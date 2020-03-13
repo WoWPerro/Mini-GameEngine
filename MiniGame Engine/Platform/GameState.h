@@ -1,6 +1,6 @@
 #pragma once
 #include "Platform.h"
-#include "ListaT.h"
+#include "..\DataBase\ListaT.h"
 
 class Platform;
 class GameStateManager;

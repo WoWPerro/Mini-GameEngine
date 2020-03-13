@@ -1,5 +1,5 @@
 #pragma once
-#include "ListaT.h"
+#include "..\DataBase\ListaT.h"
 #include "Image.h"
 
 class Gif

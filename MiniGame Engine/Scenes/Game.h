@@ -1,6 +1,6 @@
 #pragma once
-#include "GameState.h"
-#include "Text.h"
+#include "..\Platform\GameState.h"
+#include "..\AssetManager\Text.h"
 
 class Game : public GameState
 {

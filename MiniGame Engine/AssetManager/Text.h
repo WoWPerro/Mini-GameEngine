@@ -3,7 +3,7 @@
 #include "SDL_image.h"
 #include "SDL.h"
 #include <string>
-#include "Platform.h"
+#include "..\Platform\Platform.h"
 
 class Text
 {

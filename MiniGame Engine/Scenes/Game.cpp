@@ -1,6 +1,7 @@
 #include "Game.h"
-#include<iostream>
+#include <iostream>
 #include <sstream> 
+#include "..\Log\Console.h"
 
 ListaT<int> extractIntegerWords(std::string str)
 {
@@ -40,12 +41,14 @@ void Game::Init(Platform* platform, GameStateManager* manager)
 {
 	this->platform = platform;
 	this->manager = manager;
-	std::cout << " Game Init" << std::endl;
+	Console::Get()->PrintInfo(3);
 }
 
 void Game::Draw()
 {
-	std::cout << " Game Draw" << std::endl;
+	if (Console::Get()->GetVerbo() >= 1)
+	Console::Get()->PrintInfo(4);
+	//std::cout << " Game Draw" << std::endl;
 	platform->RenderClear();
 	platform->RenderPresent();
 }
@@ -72,16 +75,22 @@ bool Game::Input(ListaT<int>* keyDowns, ListaT<int>* keyUps, bool* leftclick, fl
 		}
 	}
 
-	std::cout << " Game Input" << std::endl;
+	if (Console::Get()->GetVerbo() >= 1)
+	Console::Get()->PrintInfo(5);
+	//std::cout << " Game Input" << std::endl;
 	return false;
 }
 
 void Game::Update()
 {
-	std::cout << " Game Update" << std::endl;
+	//std::cout << " Game Update" << std::endl;
+	if(Console::Get()->GetVerbo() >= 1)
+	Console::Get()->PrintInfo(6);
 }
 
 void Game::Close()
 {
-	std::cout << " Close Init" << std::endl;
+	//std::cout << " Close Init" << std::endl;
+	if (Console::Get()->GetVerbo() >= 1)
+	Console::Get()->PrintInfo(7);
 }

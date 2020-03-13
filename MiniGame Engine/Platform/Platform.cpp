@@ -2,8 +2,9 @@
 #include "SDL.h"
 #include <iostream>
 #include "GameState.h"
-#include "ListaT.h"
-#include "SimpleIni.h"
+#include "..\DataBase\ListaT.h"
+#include "..\Log\SimpleIni.h"
+#include "..\Log\Console.h"
 #include <exception>
 
 using std::string;
@@ -18,20 +19,24 @@ Platform::Platform(std::string name)
 		CSimpleIniA ini;
 		//ini.SetValue("test", "default", "1");
 		//ini.SaveFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\Settings.ini");
-		ini.LoadFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\Settings.ini");
+		ini.LoadFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\MiniGame Engine\\Log\\Settings.ini");
 		w = ini.GetValue("Configuration", "width", "");
 		h = ini.GetValue("Configuration", "height", "");
-		std::cout << "=========================================" << std::endl;
-		std::cout << w << std::endl;
-		std::cout << h << std::endl;
-		std::cout << "=========================================" << std::endl;
+		string i = ini.GetValue("Configuration", "Idiom", "");
+		Console::Get()->SetIdiom(i);
+		string v = ini.GetValue("Configuration", "Verbo", "");
+		Console::Get()->SetVerbo(v);
+		Console::Get()->PrintRaw("=========================================\n");
+		Console::Get()->PrintRaw(w);
+		Console::Get()->PrintRaw(h);
+		Console::Get()->PrintRaw("=========================================\n");
 	}
 	catch(std::exception &e)
 	{
-		std::cout << "=========================================" << std::endl;
+		Console::Get()->PrintRaw("=========================================\n");
 		std::cout << "Exception caught" << std::endl;
 		std::cout << e.what() << std::endl;
-		std::cout << "=========================================" << std::endl;
+		Console::Get()->PrintRaw("=========================================\n");
 	}
 
 	width = std::stoi(w);
@@ -47,7 +52,7 @@ Platform::Platform(std::string name)
 	//window = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_FULLSCREEN);
 	if (window == nullptr)
 	{
-		std::cout << "CreateWindow";
+		Console::Get()->PrintInfo(1);
 		SDL_Quit();
 		return;
 	}
@@ -55,7 +60,7 @@ Platform::Platform(std::string name)
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	if (renderer == nullptr)
 	{
-		std::cout << "CreateRenderer";
+		Console::Get()->PrintInfo(2);
 		SDL_Quit();
 		return;
 	}

@@ -18,6 +18,42 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssetManager\Gif.cpp" />
+    <ClCompile Include="AssetManager\Image.cpp" />
+    <ClCompile Include="AssetManager\Text.cpp" />
+    <ClCompile Include="DataBase\ListaT.cpp" />
+    <ClCompile Include="DataBase\NodoT.cpp" />
+    <ClCompile Include="DataBase\StackT.cpp" />
+    <ClCompile Include="Log\Console.cpp" />
+    <ClCompile Include="MiniGame Engine.cpp" />
+    <ClCompile Include="Platform\GameState.cpp" />
+    <ClCompile Include="Platform\GameStateManager.cpp" />
+    <ClCompile Include="Platform\Platform.cpp" />
+    <ClCompile Include="Platform\StackAllocator.cpp" />
+    <ClCompile Include="Scenes\Game.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetManager\Gif.h" />
+    <ClInclude Include="AssetManager\Image.h" />
+    <ClInclude Include="AssetManager\Text.h" />
+    <ClInclude Include="DataBase\ListaT.h" />
+    <ClInclude Include="DataBase\NodoT.h" />
+    <ClInclude Include="DataBase\StackT.h" />
+    <ClInclude Include="Log\Console.h" />
+    <ClInclude Include="Log\SimpleIni.h" />
+    <ClInclude Include="Platform\GameState.h" />
+    <ClInclude Include="Platform\GameStateManager.h" />
+    <ClInclude Include="Platform\Platform.h" />
+    <ClInclude Include="Platform\StackAllocator.h" />
+    <ClInclude Include="Scenes\Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Log\Localized.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log\Settings.ini" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{409459C4-EF67-455D-B5DF-C2EE5AED8F7B}</ProjectGuid>
@@ -153,36 +189,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameState.cpp" />
-    <ClCompile Include="GameStateManager.cpp" />
-    <ClCompile Include="Gif.cpp" />
-    <ClCompile Include="Image.cpp" />
-    <ClCompile Include="ListaT.cpp" />
-    <ClCompile Include="Log\Console.cpp" />
-    <ClCompile Include="MiniGame Engine.cpp" />
-    <ClCompile Include="NodoT.cpp" />
-    <ClCompile Include="Platform.cpp" />
-    <ClCompile Include="StackAllocator.cpp" />
-    <ClCompile Include="StackT.cpp" />
-    <ClCompile Include="Text.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameState.h" />
-    <ClInclude Include="GameStateManager.h" />
-    <ClInclude Include="Gif.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="ListaT.h" />
-    <ClInclude Include="Log\Console.h" />
-    <ClInclude Include="NodoT.h" />
-    <ClInclude Include="Platform.h" />
-    <ClInclude Include="SimpleIni.h" />
-    <ClInclude Include="StackAllocator.h" />
-    <ClInclude Include="StackT.h" />
-    <ClInclude Include="Text.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
