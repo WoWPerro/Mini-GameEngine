@@ -62,6 +62,7 @@ bool Game::Input(ListaT<int>* keyDowns, ListaT<int>* keyUps, bool* leftclick, fl
 			int num = keyUps->get_at(i)->value;
 			if (num == 27)
 			{
+				Console::Get()->SaveConsole();
 				exit(1);
 			}
 		}

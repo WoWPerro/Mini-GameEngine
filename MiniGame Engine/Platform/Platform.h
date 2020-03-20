@@ -29,6 +29,7 @@ public:
 	void CheckEvent(GameState* obj, bool (GameState::* f)(ListaT<int>* keyDowns, ListaT<int>* keyUps, bool* leftclick, float* mouseX, float* mouseY));
 
 	void DrawRect(int x, int y, int w, int h);
+	void DrawCircle(float xc, float yc, float r, int R, int B, int G);
 private:
 	void RenderTexture(Image* image, int x, int y, double a);
 

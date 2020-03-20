@@ -47,6 +47,7 @@ private:
 	bool ESP = false;
 	bool ENG = true;
 	bool config;
+	string FINALMESSAGE = "";
 public:
 	int GetVerbo();
 	void SetVerbo(string v);
@@ -60,4 +61,5 @@ public:
 	void PrintFatal(int code);
 	void PrintInfo(string message);
 	void PrintInfo(int code);
+	void SaveConsole();
 };

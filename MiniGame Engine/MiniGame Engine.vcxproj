@@ -25,6 +25,8 @@
     <ClCompile Include="DataBase\ListaT.cpp" />
     <ClCompile Include="DataBase\NodoT.cpp" />
     <ClCompile Include="DataBase\StackT.cpp" />
+    <ClCompile Include="GOM\GameObject.cpp" />
+    <ClCompile Include="GOM\Sprite.cpp" />
     <ClCompile Include="Log\Console.cpp" />
     <ClCompile Include="MiniGame Engine.cpp" />
     <ClCompile Include="Platform\GameState.cpp" />
@@ -40,6 +42,8 @@
     <ClInclude Include="DataBase\ListaT.h" />
     <ClInclude Include="DataBase\NodoT.h" />
     <ClInclude Include="DataBase\StackT.h" />
+    <ClInclude Include="GOM\GameObject.h" />
+    <ClInclude Include="GOM\Sprite.h" />
     <ClInclude Include="Log\Console.h" />
     <ClInclude Include="Log\SimpleIni.h" />
     <ClInclude Include="Platform\GameState.h" />

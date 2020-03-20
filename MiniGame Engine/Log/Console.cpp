@@ -22,6 +22,13 @@ Console* Console::Get()
 	}
 }
 
+void Console::SaveConsole()
+{
+	std::ofstream outfile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\EngineConfig\\Console.txt");
+	outfile << FINALMESSAGE;
+	outfile.close();
+}
+
 int Console::GetVerbo()
 {
 	return VerboLevel;
@@ -52,7 +59,7 @@ void Console::PrintRaw(string message)
 	SetConsoleTextAttribute(hConsole, 15);
 	string date = GetDate();
 	cout << "[" << date << "]" << "MESSAGE: " << message << "\n";
-
+	FINALMESSAGE += "[" + date + "]" + "MESSAGE: " + message + "\n";
 	/*historial.open();
 	historial << "[" << date << "]" << "MESSAGE: " << message << "\n";
 	historial.close();*/
@@ -65,6 +72,7 @@ void Console::PrintInfo(string message)
 	SetConsoleTextAttribute(hConsole, 9);
 	string date = GetDate();
 	cout << "[" << date << "]" << "INFO: " << message << "\n";
+	FINALMESSAGE += "[" + date + "]" + "INFO: " + message + "\n";
 }
 
 void Console::PrintError(string message)
@@ -73,6 +81,7 @@ void Console::PrintError(string message)
 	SetConsoleTextAttribute(hConsole, 12);
 	string date = GetDate();
 	cout << "[" << date << "]" << "ERROR: " << message << "\n";
+	FINALMESSAGE += "[" + date + "]" + "ERROR: " + message + "\n";
 }
 
 void Console::PrintWarning(string message)
@@ -81,6 +90,7 @@ void Console::PrintWarning(string message)
 	SetConsoleTextAttribute(hConsole, 6);
 	string date = GetDate();
 	cout << "[" << date << "]" << "WARNING: " << message << "\n";
+	FINALMESSAGE += "[" + date + "]" + "WARNING: " + message + "\n";
 }
 
 void Console::PrintFatal(string message)
@@ -89,6 +99,7 @@ void Console::PrintFatal(string message)
 	SetConsoleTextAttribute(hConsole, 4);
 	string date = GetDate();
 	cout << "[" << date << "]" << "FATAL: " << message << "\n";
+	FINALMESSAGE += "[" + date + "]" + "FATAL: " + message + "\n";
 }
 
 void Console::PrintInfo(int code)
@@ -98,10 +109,16 @@ void Console::PrintInfo(int code)
 
 	SetConsoleTextAttribute(hConsole, 9); 
 	string date = GetDate();
-	if(ESP)
+	if (ESP)
+	{
 		cout << "[" << date << "]" << "INFO: " << ESP_INFO.get_at(code)->value << "\n";
-	else if(ENG)
+		FINALMESSAGE += "[" + date + "]" + "INFO: " + ESP_INFO.get_at(code)->value + "\n";
+	}
+	else if (ENG)
+	{
 		cout << "[" << date << "]" << "INFO: " << ENG_INFO.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "INFO: " + ENG_INFO.get_at(code)->value + "\n";
+	}
 }
 
 void Console::PrintError(int code)
@@ -111,9 +128,15 @@ void Console::PrintError(int code)
 	SetConsoleTextAttribute(hConsole, 12);
 	string date = GetDate();
 	if (ESP)
+	{
 		cout << "[" << date << "]" << "ERROR: " << ESP_ERR.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "ERROR: " + ESP_ERR.get_at(code)->value + "\n";
+	}
 	else if (ENG)
+	{
 		cout << "[" << date << "]" << "ERROR: " << ENG_ERR.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "ERROR: " + ENG_ERR.get_at(code)->value + "\n";
+	}
 }
 
 void Console::PrintWarning(int code)
@@ -123,9 +146,15 @@ void Console::PrintWarning(int code)
 	SetConsoleTextAttribute(hConsole, 6);
 	string date = GetDate();
 	if (ESP)
+	{
 		cout << "[" << date << "]" << "WARNING: " << ESP_WARN.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "WARNING: " + ESP_WARN.get_at(code)->value + "\n";
+	}
 	else if (ENG)
+	{
 		cout << "[" << date << "]" << "WARNING: " << ENG_WARN.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "WARNING: " + ENG_WARN.get_at(code)->value + "\n";
+	}
 }
 
 void Console::PrintFatal(int code)
@@ -136,9 +165,15 @@ void Console::PrintFatal(int code)
 	SetConsoleTextAttribute(hConsole, 4);
 	string date = GetDate();
 	if (ESP)
-		cout << "[" << date << "]" << "FATAL: " << ESP_INFO.get_at(code)->value << "\n";
+	{
+		cout << "[" << date << "]" << "FATAL: " << ESP_FATL.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "FATAL: " + ENG_FATL.get_at(code)->value + "\n";
+	}
 	else if (ENG)
-		cout << "[" << date << "]" << "FATAL: " << ENG_INFO.get_at(code)->value << "\n";
+	{
+		cout << "[" << date << "]" << "FATAL: " << ENG_FATL.get_at(code)->value << "\n";
+		FINALMESSAGE += "[" + date + "]" + "FATAL: " + ENG_FATL.get_at(code)->value + "\n";
+	}
 }
 
 void Console::SetStrings()
@@ -150,7 +185,7 @@ void Console::SetStrings()
 		bool ingles = false;
 		string line;
 		ifstream localized;
-		localized.open("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\MiniGame Engine\\Log\\Localized.txt");
+		localized.open("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\EngineConfig\\Localized.txt");
 		if (!localized)
 		{
 			cout << "ERR00\n";

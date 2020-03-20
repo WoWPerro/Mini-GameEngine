@@ -16,7 +16,7 @@ private:
 	Image* image;
 	ListaT<Image> ImageList;
 	int index = 0;
-	Uint32 _lastFrameTime = SDL_GetTicks() + _vel;;
+	Uint32 _lastFrameTime = SDL_GetTicks() + _vel;
 	int _vel;
 	bool _finish = false;
 	bool _loop = false;

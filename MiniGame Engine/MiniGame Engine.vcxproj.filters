@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Platform">
       <UniqueIdentifier>{ebae1ff4-3f6c-4a35-bc14-7e1022402fc9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GOM">
+      <UniqueIdentifier>{e2300464-6501-4148-bcc0-fe9053ee250c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MiniGame Engine.cpp">
@@ -69,6 +72,12 @@
     <ClCompile Include="Scenes\Game.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="GOM\GameObject.cpp">
+      <Filter>Source Files\GOM</Filter>
+    </ClCompile>
+    <ClCompile Include="GOM\Sprite.cpp">
+      <Filter>Source Files\GOM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager\Gif.h">
@@ -109,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="Scenes\Game.h">
       <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GOM\GameObject.h">
+      <Filter>Source Files\GOM</Filter>
+    </ClInclude>
+    <ClInclude Include="GOM\Sprite.h">
+      <Filter>Source Files\GOM</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@ Platform::Platform(std::string name)
 		CSimpleIniA ini;
 		//ini.SetValue("test", "default", "1");
 		//ini.SaveFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\Settings.ini");
-		ini.LoadFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\MiniGame Engine\\Log\\Settings.ini");
+		ini.LoadFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\EngineConfig\\Settings.ini");
 		w = ini.GetValue("Configuration", "width", "");
 		h = ini.GetValue("Configuration", "height", "");
 		string i = ini.GetValue("Configuration", "Idiom", "");
@@ -89,6 +89,40 @@ void Platform::DrawRect(int x, int y, int w, int h)
 	SDL_RenderFillRect(renderer, &rect);
 	SDL_RenderDrawRect(renderer, &rect);
 
+}
+
+void Platform::DrawCircle(float xc, float yc, float r, int R, int B, int G)
+{
+	float p = 1 - r;
+	yc = -yc;
+	float x = 0;
+	float y = r;
+
+	do
+	{
+		//Aprovechar simetría del círculo
+		//SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x40, 0xFF);
+		SDL_SetRenderDrawColor(renderer, R, G, B, 0xFF);
+		SDL_RenderDrawPoint(renderer, x + xc, y + yc);
+		SDL_RenderDrawPoint(renderer, x + xc, -y + yc);
+		SDL_RenderDrawPoint(renderer, -x + xc, y + yc);
+		SDL_RenderDrawPoint(renderer, -x + xc, -y + yc);
+		SDL_RenderDrawPoint(renderer, y + xc, x + yc);
+		SDL_RenderDrawPoint(renderer, y + xc, -x + yc);
+		SDL_RenderDrawPoint(renderer, -y + xc, x + yc);
+		SDL_RenderDrawPoint(renderer, -y + xc, -x + yc);
+		if (p <= 0)
+		{
+			x++;
+			p = p + (2 * x) + 3;
+		}
+		else if (p > 0)
+		{
+			x++;
+			y = y - 1;
+			p = (2 * x) - (2 * y) + 5 + p;
+		}
+	} while (x <= y);
 }
 
 void Platform::RenderImage(Image* image, int x, int y, float angle)
