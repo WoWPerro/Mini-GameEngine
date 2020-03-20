@@ -3,8 +3,8 @@
 #include <sstream> 
 #include "..\Log\Console.h"
 #include "lua.h"
-#include "../ScriptingSystem/LuaScript.h"
-#include "../ScriptingSystem/LuaContext.hpp"
+//#include "../ScriptingSystem/LuaScript.h"
+//#include "../ScriptingSystem/LuaContext.hpp"
 
 ListaT<int> extractIntegerWords(std::string str)
 {
@@ -52,10 +52,10 @@ void Game::Init(Platform* platform, GameStateManager* manager)
 	/*LuaScript script("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\Scripts\\Test.lua");
 	std::string filename = script.get<std::string>("player.filename");
 	int posX = script.get<int>("player.pos.X");*/
-	LuaContext lua;
-	lua.writeVariable("x", 5);
-	lua.executeCode("x = x + 2;");
-	std::cout << lua.readVariable<int>("x") << std::endl;       // prints 7
+	//LuaContext lua;
+	//lua.writeVariable("x", 5);
+	//lua.executeCode("x = x + 2;");
+	//std::cout << lua.readVariable<int>("x") << std::endl;       // prints 7
 }
 
 void Game::Draw()

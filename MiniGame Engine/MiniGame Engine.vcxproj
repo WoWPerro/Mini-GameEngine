@@ -35,7 +35,7 @@
     <ClCompile Include="Platform\Platform.cpp" />
     <ClCompile Include="Platform\StackAllocator.cpp" />
     <ClCompile Include="Scenes\Game.cpp" />
-    <ClCompile Include="ScriptingSystem\LuaScript.cpp" />
+    <ClCompile Include="ScriptingSystem\LUA.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager\Gif.h" />
@@ -55,8 +55,6 @@
     <ClInclude Include="Scenes\Game.h" />
     <ClInclude Include="ScriptingSystem\exception.hpp" />
     <ClInclude Include="ScriptingSystem\LUA.h" />
-    <ClInclude Include="ScriptingSystem\LuaContext.hpp" />
-    <ClInclude Include="ScriptingSystem\LuaScript.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Debug\EngineConfig\Console.txt" />
@@ -65,7 +63,6 @@
   <ItemGroup>
     <None Include="..\Debug\EngineConfig\Settings.ini" />
     <None Include="..\Debug\Scripts\Test.lua" />
-    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -205,6 +202,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets" Condition="Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets')" />
+    <Import Project="..\packages\boost.1.71.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.71.0.0\build\boost.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -212,5 +210,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props'))" />
     <Error Condition="!Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets'))" />
+    <Error Condition="!Exists('..\packages\boost.1.71.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.71.0.0\build\boost.targets'))" />
   </Target>
 </Project>

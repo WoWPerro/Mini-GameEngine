@@ -83,7 +83,7 @@
     <ClCompile Include="GOM\Sprite.cpp">
       <Filter>Source Files\GOM</Filter>
     </ClCompile>
-    <ClCompile Include="ScriptingSystem\LuaScript.cpp">
+    <ClCompile Include="ScriptingSystem\LUA.cpp">
       <Filter>Source Files\ScriptingSystem</Filter>
     </ClCompile>
   </ItemGroup>
@@ -133,16 +133,10 @@
     <ClInclude Include="GOM\Sprite.h">
       <Filter>Source Files\GOM</Filter>
     </ClInclude>
-    <ClInclude Include="ScriptingSystem\LuaScript.h">
-      <Filter>Source Files\ScriptingSystem</Filter>
-    </ClInclude>
     <ClInclude Include="ScriptingSystem\LUA.h">
       <Filter>Source Files\ScriptingSystem</Filter>
     </ClInclude>
     <ClInclude Include="ScriptingSystem\exception.hpp">
-      <Filter>Source Files\ScriptingSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="ScriptingSystem\LuaContext.hpp">
       <Filter>Source Files\ScriptingSystem</Filter>
     </ClInclude>
   </ItemGroup>
@@ -161,6 +155,5 @@
     <None Include="..\Debug\Scripts\Test.lua">
       <Filter>Source Files\Scripts</Filter>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>
