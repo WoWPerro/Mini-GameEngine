@@ -10,7 +10,7 @@ private:
 	int w;
 	int h;
 public:
-	void LoadImage(std::string name);
+	void LoadImageA(std::string name);
 	SDL_Texture* GetTexture();
 	int GetWidth();
 	int GetHeight();

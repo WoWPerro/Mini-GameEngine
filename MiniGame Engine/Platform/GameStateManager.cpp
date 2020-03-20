@@ -1,5 +1,6 @@
 #include "GameStateManager.h"
 #include <iostream>
+#include "../Log/SimpleIni.h"
 
 GameStateManager::GameStateManager()
 {
@@ -13,6 +14,10 @@ GameStateManager::~GameStateManager()
 
 void GameStateManager::GameLoop()
 {
+	CSimpleIniA ini;
+	ini.LoadFile("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\EngineConfig\\Settings.ini");
+	int buffer = std::stoi(ini.GetValue("Configuration", "buffer", ""));
+	stackAllocator = new StackAllocator(1024 * 1024 * buffer);
 	while (true)
 	{
 		try

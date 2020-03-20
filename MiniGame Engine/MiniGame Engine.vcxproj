@@ -34,6 +34,7 @@
     <ClCompile Include="Platform\Platform.cpp" />
     <ClCompile Include="Platform\StackAllocator.cpp" />
     <ClCompile Include="Scenes\Game.cpp" />
+    <ClCompile Include="ScriptingSystem\LuaScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager\Gif.h" />
@@ -51,12 +52,16 @@
     <ClInclude Include="Platform\Platform.h" />
     <ClInclude Include="Platform\StackAllocator.h" />
     <ClInclude Include="Scenes\Game.h" />
+    <ClInclude Include="ScriptingSystem\LUA.h" />
+    <ClInclude Include="ScriptingSystem\LuaScript.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Log\Localized.txt" />
+    <Text Include="..\Debug\EngineConfig\Console.txt" />
+    <Text Include="..\Debug\EngineConfig\Localized.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Log\Settings.ini" />
+    <None Include="..\Debug\EngineConfig\Settings.ini" />
+    <None Include="..\Debug\Scripts\Test.lua" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -131,13 +136,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\ExternalLibs\SDL2-2.0.9\include;..\ExternalLibs\SDL2_image-2.0.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ExternalLibs\SDL2-2.0.9\include;..\ExternalLibs\SDL2_image-2.0.4\include;..\ExternalLibs\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\ExternalLibs\SDL2_image-2.0.4\lib\x86;..\ExternalLibs\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ExternalLibs\SDL2_image-2.0.4\lib\x86;..\ExternalLibs\SDL2-2.0.9\lib\x86;..\ExternalLibs\Lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2main.lib;liblua53.a;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

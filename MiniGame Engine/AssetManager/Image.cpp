@@ -1,7 +1,7 @@
 #include "Image.h"
 #include "SDL_image.h"
 #include "..\Platform\Platform.h"
-void Image::LoadImage(std::string name)
+void Image::LoadImageA(std::string name)
 {
 	this->name = name;
 	SDL_Surface* loadedSurface = IMG_Load(name.c_str());

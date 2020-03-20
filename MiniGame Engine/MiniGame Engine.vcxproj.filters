@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\AssetManager">
       <UniqueIdentifier>{1ef01d96-cb38-420d-b438-8825649c722c}</UniqueIdentifier>
     </Filter>
@@ -30,6 +26,15 @@
     </Filter>
     <Filter Include="Source Files\GOM">
       <UniqueIdentifier>{e2300464-6501-4148-bcc0-fe9053ee250c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineConfig">
+      <UniqueIdentifier>{271b3a62-3522-4151-9b77-b52832879fe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripts">
+      <UniqueIdentifier>{0b935ace-d38b-43c6-8ea3-85a2e13d76c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ScriptingSystem">
+      <UniqueIdentifier>{ff7c53ce-9f47-4fb3-8283-ce7036a947ce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +83,9 @@
     <ClCompile Include="GOM\Sprite.cpp">
       <Filter>Source Files\GOM</Filter>
     </ClCompile>
+    <ClCompile Include="ScriptingSystem\LuaScript.cpp">
+      <Filter>Source Files\ScriptingSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager\Gif.h">
@@ -125,15 +133,27 @@
     <ClInclude Include="GOM\Sprite.h">
       <Filter>Source Files\GOM</Filter>
     </ClInclude>
+    <ClInclude Include="ScriptingSystem\LuaScript.h">
+      <Filter>Source Files\ScriptingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingSystem\LUA.h">
+      <Filter>Source Files\ScriptingSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Log\Localized.txt">
-      <Filter>Source Files\Log</Filter>
+    <Text Include="..\Debug\EngineConfig\Console.txt">
+      <Filter>Source Files\EngineConfig</Filter>
+    </Text>
+    <Text Include="..\Debug\EngineConfig\Localized.txt">
+      <Filter>Source Files\EngineConfig</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Log\Settings.ini">
-      <Filter>Source Files\Log</Filter>
+    <None Include="..\Debug\EngineConfig\Settings.ini">
+      <Filter>Source Files\EngineConfig</Filter>
+    </None>
+    <None Include="..\Debug\Scripts\Test.lua">
+      <Filter>Source Files\Scripts</Filter>
     </None>
   </ItemGroup>
 </Project>

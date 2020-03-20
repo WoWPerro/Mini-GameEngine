@@ -6,7 +6,6 @@
 #include <iostream>
 class StackAllocator
 {
-
 public:
 	typedef size_t Marker;
 	StackAllocator(size_t size);
@@ -14,7 +13,6 @@ public:
 	Marker getMarker();
 	void freeToMarker(Marker marker);
 	void clear();
-
 private:
 	int maxSize;
 	void* start;

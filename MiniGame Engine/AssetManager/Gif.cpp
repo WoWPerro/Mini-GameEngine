@@ -50,6 +50,6 @@ void Gif::SetVelocity(int vel)
 void Gif::AddImage(std::string i)
 {
 	image = new Image();
-	image->LoadImage(i);
+	image->LoadImageA(i);
 	ImageList.push_back(*image);
 }

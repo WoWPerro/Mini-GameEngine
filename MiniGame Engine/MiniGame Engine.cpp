@@ -13,8 +13,6 @@ int main(int argc, char* argv[])
 {
 	srand(time(NULL));
 	GameStateManager* manager = new GameStateManager();
-	Console::Get()->PrintRaw("Mi perro");
-	Console::Get()->PrintFatal("AYUDAAAAAAAAAAAAAAAAAAA");
 	manager->SetState(new Game());
 	manager->GameLoop();
 	delete manager;

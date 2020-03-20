@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream> 
 #include "..\Log\Console.h"
+#include "lua.h"
+#include "../ScriptingSystem/LuaScript.h"
 
 ListaT<int> extractIntegerWords(std::string str)
 {
@@ -29,7 +31,7 @@ ListaT<int> extractIntegerWords(std::string str)
 
 Game::Game()
 {
-
+	
 }
 
 Game::~Game()
@@ -42,6 +44,13 @@ void Game::Init(Platform* platform, GameStateManager* manager)
 	this->platform = platform;
 	this->manager = manager;
 	Console::Get()->PrintInfo(3);
+	i = new Image();
+	i->LoadImageA("../Assets/Images/Diamond-export1.png");
+	t = new Text("../Assets/Fonts/8-BIT WONDER.TTF", 30, "TEST STRING ABCDEFG", { 255, 255, 0, 255 });
+	t2 = new Text("../Assets/Fonts/arial.ttf", 30, "TEST STRING ABCDEFGÑ", { 255, 0, 255, 255 });
+	/*LuaScript script("C:\\Dev_WoWperro\\source\\repos\\7_Trimestre\\Diseño de Sistemas de juegos\\MiniGame Engine\\Debug\\Scripts\\Test.lua");
+	std::string filename = script.get<std::string>("player.filename");
+	int posX = script.get<int>("player.pos.X");*/
 }
 
 void Game::Draw()
@@ -50,6 +59,13 @@ void Game::Draw()
 	Console::Get()->PrintInfo(4);
 	//std::cout << " Game Draw" << std::endl;
 	platform->RenderClear();
+	platform->DrawRect(20, 20, 20, 20);
+	platform->DrawRect(50, 20, 30, 20);
+	platform->DrawRect(100, 20, 40, 40);
+	platform->DrawCircle(50, 50, 50, 255, 255, 255);
+	platform->RenderImage(i, 100, 500, 0);
+	t->Display(100,100);
+	t2->Display(100, 200);
 	platform->RenderPresent();
 }
 
