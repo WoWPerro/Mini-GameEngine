@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props" Condition="Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -52,7 +53,9 @@
     <ClInclude Include="Platform\Platform.h" />
     <ClInclude Include="Platform\StackAllocator.h" />
     <ClInclude Include="Scenes\Game.h" />
+    <ClInclude Include="ScriptingSystem\exception.hpp" />
     <ClInclude Include="ScriptingSystem\LUA.h" />
+    <ClInclude Include="ScriptingSystem\LuaContext.hpp" />
     <ClInclude Include="ScriptingSystem\LuaScript.h" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +65,7 @@
   <ItemGroup>
     <None Include="..\Debug\EngineConfig\Settings.ini" />
     <None Include="..\Debug\Scripts\Test.lua" />
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -200,5 +204,13 @@
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets" Condition="Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.props'))" />
+    <Error Condition="!Exists('..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.1.0.0\build\native\vcpkg.C.DevWoWperro.vcpkgmaster.vcpkgmaster.targets'))" />
+  </Target>
 </Project>

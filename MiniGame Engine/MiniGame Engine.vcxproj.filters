@@ -139,6 +139,12 @@
     <ClInclude Include="ScriptingSystem\LUA.h">
       <Filter>Source Files\ScriptingSystem</Filter>
     </ClInclude>
+    <ClInclude Include="ScriptingSystem\exception.hpp">
+      <Filter>Source Files\ScriptingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingSystem\LuaContext.hpp">
+      <Filter>Source Files\ScriptingSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Debug\EngineConfig\Console.txt">
@@ -155,5 +161,6 @@
     <None Include="..\Debug\Scripts\Test.lua">
       <Filter>Source Files\Scripts</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
